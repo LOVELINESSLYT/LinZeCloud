@@ -10,6 +10,7 @@
         <module>linze-view-service-feign</module>
         <module>linze-zuul-service</module>
         <module>linze-turbine-service</module>
+        <module>linze-config-server</module>
     </modules>
 
     <modelVersion>4.0.0</modelVersion>

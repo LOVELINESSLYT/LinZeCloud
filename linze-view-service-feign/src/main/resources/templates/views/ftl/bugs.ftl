@@ -57,6 +57,11 @@
             ${.now}
         </th>
     </tr>
+    <tr>
+        <th align="center" colspan="4">
+            ${version}
+        </th>
+    </tr>
 </table>
 
 </body>

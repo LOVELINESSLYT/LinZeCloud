@@ -18,6 +18,12 @@ import org.springframework.context.annotation.Bean;
 public class ViewServiceFeignApplication {
 
     public static void main(String[] args) {
+        // 判断 rabiitMQ 是否启动
+        int rabbitMQPort = 5672;
+        if (!NetUtil.isUsableLocalPort(rabbitMQPort)) {
+            System.err.printf("未在端口%d 发现 rabbitMQ 服务，请检查 rabbitMQ 是否启动 %n", rabbitMQPort);
+            System.exit(1);
+        }
         // 因为要启动多个，例如 8111、8012、8013 ......
         // 所以采用自动切换端口，去启动，启动的时候我们等待第一个启动完成后，在启动第二个
         int port = 8011;
